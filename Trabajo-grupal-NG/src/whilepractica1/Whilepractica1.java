@@ -103,6 +103,7 @@ public class Whilepractica1 {
      public static void consultar_saldo(){
          System.out.println("--------CONSULTAR SALDO --------");
          System.out.printf("Saldo disponible: $%.2f%n", saldo);
+         System.out.println(" Consulta realizada.");
      }
      
      // Retirar saldo 
@@ -114,7 +115,7 @@ public class Whilepractica1 {
          // Validamos que tenga dinero y que no pida numeros negativos
          if (cantidadRetirar >0 && cantidadRetirar <=saldo){
              saldo = saldo - cantidadRetirar; // Restamos al saldo global 
-             System.out.println("Retiro exitoso");
+             System.out.println("Retiro realizado correctamente.");
              System.out.printf("Saldo restante: $%.2f%n", saldo);
          }else if (cantidadRetirar > saldo ){
              System.out.println("error: saldo insuficiente. tu saldo actual es de : "+saldo );
@@ -131,7 +132,7 @@ public class Whilepractica1 {
          
          if (cantidadDepositar > 0) {
              saldo = saldo + cantidadDepositar; // Sumamos al saldo global
-             System.out.println("Depósito exitoso.");
+             System.out.println("Depósito realizado correctamente.");
              System.out.println("Tu nuevo saldo es de: " + saldo);
          } else {
              System.out.println("Cantidad no válida.");
