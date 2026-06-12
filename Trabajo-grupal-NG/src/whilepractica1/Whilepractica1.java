@@ -40,7 +40,7 @@ public class Whilepractica1 {
              
              if (clave_ingresada == clave){
                 do {
-                 System.out.println("\nBIENBENIDO AL CAJERO");//mejora de mensaje
+                 System.out.println("\nBIENBENIDO AL CAJERO ");//mejora de mensaje
                  System.out.println("\n========== MENU ==========");
                  System.out.println("1.consultar saldo");
                  System.out.println("2.retirar dinero");
