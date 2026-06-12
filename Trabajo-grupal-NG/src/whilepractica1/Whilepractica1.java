@@ -20,7 +20,6 @@ public class Whilepractica1 {
      public static void cajero_automatico(){
          int clave = 1234;
          int intentos = 3;
-         // CAMBIO 2: Variable de control para saber si el usuario cerró sesión voluntariamente
          boolean sesionActiva = true; 
          
          while (intentos > 0 && sesionActiva){
@@ -57,7 +56,6 @@ public class Whilepractica1 {
                          break;
                      case 4:
                          System.out.println("gracias por preferirnos");
-                         // CAMBIO 2: Cambiamos a falso para apagar por completo el cajero al salir
                          sesionActiva = false; 
                          break;
                      default:
@@ -65,7 +63,8 @@ public class Whilepractica1 {
                          intentos2 --;
                  }
                  
-                } while (opcion !=4 && intentos >0);
+                // CAMBIO 3: Simplificada la condición del do-while para evitar bucles raros en el menú interno
+                } while (opcion != 4); 
                     break;
                      
                  }else{
