@@ -64,7 +64,8 @@ public class Whilepractica1 {
                              depositar_dinero();
                              break;
                          case 4: // Opcion salir (Cambio 2 realizado)
-                             System.out.println("gracias por preferirnos");
+                             System.out.println("Cerrando sesion...");
+                             System.out.println("gracias por utilizar nuestro cajero");
                              sesionActiva = false; 
                              break;
                          default:
