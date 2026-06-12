@@ -102,7 +102,7 @@ public class Whilepractica1 {
      // Consultar saldo
      public static void consultar_saldo(){
          System.out.println("--------CONSULTAR SALDO --------");
-         System.out.println("el saldo disponible es de "+ saldo);
+         System.out.printf("Saldo disponible: $%.2f%n", saldo);
      }
      
      // Retirar saldo 
@@ -115,7 +115,7 @@ public class Whilepractica1 {
          if (cantidadRetirar >0 && cantidadRetirar <=saldo){
              saldo = saldo - cantidadRetirar; // Restamos al saldo global 
              System.out.println("Retiro exitoso");
-             System.out.println("Saldo restante :" + saldo);
+             System.out.printf("Saldo restante: $%.2f%n", saldo);
          }else if (cantidadRetirar > saldo ){
              System.out.println("error: saldo insuficiente. tu saldo actual es de : "+saldo );
          }else{
