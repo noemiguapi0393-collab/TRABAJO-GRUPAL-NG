@@ -29,8 +29,9 @@ public class Whilepractica1 {
          boolean sesionActiva = true; // Control de salida del cajero
          
          while (intentos > 0 && sesionActiva){
-             System.out.println("cajero automatico");
-             System.out.println("------------------");
+             System.out.println("==================");
+             System.out.println("CAJERO AUTOMATICO");
+             System.out.println("====================");
              System.out.println("ingrese su tarjeta: ");
              System.out.println("tarjeta detectada");
              System.out.println("ingrese su clave");
@@ -39,13 +40,14 @@ public class Whilepractica1 {
              
              if (clave_ingresada == clave){
                 do {
-                 System.out.println("\nbienvenido al cajero");
-                 System.out.println("seleccione una opcion: ");
+                 System.out.println("\nBIENBENIDO AL CAJERO");//mejora de mensaje
+                 System.out.println("\n========== MENU ==========");
                  System.out.println("1.consultar saldo");
                  System.out.println("2.retirar dinero");
                  System.out.println("3.depositar dinero");
                  System.out.println("4.salir");
-                 System.out.println("ingrese la opcion deseada");
+                 System.out.println("ingrese la opcion deseada: ");
+                 System.out.println("==============================");
                  
                  // CAMBIO 6: Validamos si lo que ingresó el usuario es realmente un número entero
                  if (sc.hasNextInt()) {
@@ -135,4 +137,5 @@ public class Whilepractica1 {
              System.out.println("Cantidad no válida.");
          }
      }
+ 
 }
