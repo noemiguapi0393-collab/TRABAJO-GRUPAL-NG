@@ -45,7 +45,7 @@ public class Whilepractica1 {
                  System.out.println("1.consultar saldo");
                  System.out.println("2.retirar dinero");
                  System.out.println("3.depositar dinero");
-                 System.out.println("4.salir");
+                 System.out.println("4.salir del sistema");
                  System.out.println("ingrese la opcion deseada: ");
                  System.out.println("''''''''''''''''''''''''''''");
                  
