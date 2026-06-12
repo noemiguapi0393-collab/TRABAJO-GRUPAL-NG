@@ -47,25 +47,33 @@ public class Whilepractica1 {
                  System.out.println("4.salir");
                  System.out.println("ingrese la opcion deseada");
                  
-                 opcion = sc.nextInt();
-                  
-                 switch (opcion){
-                     case 1: // Opcion consultar
-                         consultar_saldo();   
-                         break;
-                     case 2: // Opcion retirar
-                         retirar_saldo();
-                         break;
-                     case 3: // Opcion depositar (Cambio 1 realizado)
-                         depositar_dinero();
-                         break;
-                     case 4: // Opcion salir (Cambio 2 realizado)
-                         System.out.println("gracias por preferirnos");
-                         sesionActiva = false; 
-                         break;
-                     default:
-                         // CAMBIO 5: Se eliminó la variable muerta intentos2 para optimizar el código
-                         System.out.println("opcion incorrecta");
+                 // CAMBIO 6: Validamos si lo que ingresó el usuario es realmente un número entero
+                 if (sc.hasNextInt()) {
+                     opcion = sc.nextInt();
+                     
+                     switch (opcion){
+                         case 1: // Opcion consultar
+                             consultar_saldo();   
+                             break;
+                         case 2: // Opcion retirar
+                             retirar_saldo();
+                             break;
+                         case 3: // Opcion depositar (Cambio 1 realizado)
+                             depositar_dinero();
+                             break;
+                         case 4: // Opcion salir (Cambio 2 realizado)
+                             System.out.println("gracias por preferirnos");
+                             sesionActiva = false; 
+                             break;
+                         default:
+                             // (Cambio 5 realizado: Eliminada variable muerta)
+                             System.out.println("opcion incorrecta");
+                     }
+                 } else {
+                     // Si ingresa una letra o símbolo, entra aquí sin romper el programa
+                     System.out.println("Error: Por favor, ingrese un numero valido (1-4).");
+                     opcion = 0; // Reseteamos la opción para que no se quede en bucle infinito
+                     sc.next(); // Limpiamos el buffer consumiendo la letra incorrecta
                  }
                  
                  // Bloque de pausa activa (Cambio 4 realizado)
