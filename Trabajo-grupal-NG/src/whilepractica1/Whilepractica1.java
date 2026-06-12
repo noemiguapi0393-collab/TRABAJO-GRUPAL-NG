@@ -47,7 +47,7 @@ public class Whilepractica1 {
                  System.out.println("3.depositar dinero");
                  System.out.println("4.salir");
                  System.out.println("ingrese la opcion deseada: ");
-                 System.out.println("==============================");
+                 System.out.println("''''''''''''''''''''''''''''");
                  
                  // CAMBIO 6: Validamos si lo que ingresó el usuario es realmente un número entero
                  if (sc.hasNextInt()) {
