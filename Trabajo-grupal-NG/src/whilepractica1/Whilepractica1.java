@@ -11,6 +11,11 @@ import java.util.Scanner;
  * @author Estudiante
  */
 public class Whilepractica1 {
+    //ponemos el saldo aqui afuera para que todos los metodos los visualicen 
+    
+    //y se actualicen de verdad 
+     public static double saldo = 500;
+     public static Scanner sc = new Scanner(System.in);
 
     /**
      * @param args the command line arguments
@@ -21,7 +26,7 @@ public class Whilepractica1 {
     
 
      public static void cajero_automatico(){
-         Scanner sc = new Scanner(System.in);
+        
      
 
          //algoritmo para simular cajero automatico
@@ -91,7 +96,7 @@ public class Whilepractica1 {
      }
      
      public static void consultar_saldo(){
-         double saldo = 500;
+         
          System.out.println("el saldo disponible es de "+ saldo);
      }
 }
