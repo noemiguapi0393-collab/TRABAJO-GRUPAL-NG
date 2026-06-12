@@ -103,6 +103,8 @@ public class Whilepractica1 {
      }
      //retirar saldo 
      public static void retirar_saldo (){
-         
+         double cantidadRetirar = sc.nextDouble();
+         System.out.println("---------RETIRAR SALDO-----------");
+         System.out.println("Ingresa la cantidad a retirar: ");
      }
 }
