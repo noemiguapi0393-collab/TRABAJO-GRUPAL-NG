@@ -101,4 +101,8 @@ public class Whilepractica1 {
          System.out.println("--------CONSULTAR SALDO --------");
          System.out.println("el saldo disponible es de "+ saldo);
      }
+     //retirar saldo 
+     public static void retirar_saldo (){
+         
+     }
 }
