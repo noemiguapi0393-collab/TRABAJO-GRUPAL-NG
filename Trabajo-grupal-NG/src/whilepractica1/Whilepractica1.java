@@ -20,7 +20,10 @@ public class Whilepractica1 {
      public static void cajero_automatico(){
          int clave = 1234;
          int intentos = 3;
-         while (intentos > 0 && intentos <=3){
+         // CAMBIO 2: Variable de control para saber si el usuario cerró sesión voluntariamente
+         boolean sesionActiva = true; 
+         
+         while (intentos > 0 && sesionActiva){
              System.out.println("cajero automatico");
              System.out.println("------------------");
              System.out.println("ingrese su tarjeta: ");
@@ -50,11 +53,12 @@ public class Whilepractica1 {
                          retirar_saldo();
                          break;
                      case 3:
-                         // CAMBIO 1: Se llama al nuevo método para depositar
                          depositar_dinero();
                          break;
                      case 4:
                          System.out.println("gracias por preferirnos");
+                         // CAMBIO 2: Cambiamos a falso para apagar por completo el cajero al salir
+                         sesionActiva = false; 
                          break;
                      default:
                          System.out.println("opcion incorrecta");
@@ -95,7 +99,6 @@ public class Whilepractica1 {
          }
      }
 
-     // CAMBIO 1: Nuevo método agregado para actualizar el saldo global al depositar
      public static void depositar_dinero() {
          System.out.println("---------DEPOSITAR DINERO-----------");
          System.out.println("Ingresa la cantidad a depositar: ");
