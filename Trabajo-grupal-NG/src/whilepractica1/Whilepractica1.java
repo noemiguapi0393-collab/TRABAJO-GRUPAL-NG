@@ -106,5 +106,17 @@ public class Whilepractica1 {
          double cantidadRetirar = sc.nextDouble();
          System.out.println("---------RETIRAR SALDO-----------");
          System.out.println("Ingresa la cantidad a retirar: ");
+         //validamos que tenga dinero y que no pida numeros negativos
+         if (cantidadRetirar >0 && cantidadRetirar <=saldo){
+         saldo = saldo - cantidadRetirar;//restamos al saldo global 
+         System.out.println("Retiro exitoso");
+         System.out.println("Saldo restante :" + saldo);
+         
+         }else if (cantidadRetirar > saldo ){
+             System.out.println("error: saldo insuficiente. tu saldo actual es de : "+saldo );
+             
+             }else{
+                 System.out.println("cantidad no valida ");
+                 }
      }
 }
