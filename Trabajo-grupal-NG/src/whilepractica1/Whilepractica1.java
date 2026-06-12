@@ -63,7 +63,7 @@ public class Whilepractica1 {
                      break;
                  case 2://opcion retirar
                      
-                     System.out.println("retirar saldo");
+                    
                      retirar_saldo();
                      
                      break;
@@ -103,9 +103,10 @@ public class Whilepractica1 {
      }
      //retirar saldo 
      public static void retirar_saldo (){
-         double cantidadRetirar = sc.nextDouble();
+         
          System.out.println("---------RETIRAR SALDO-----------");
          System.out.println("Ingresa la cantidad a retirar: ");
+         double cantidadRetirar = sc.nextDouble();
          //validamos que tenga dinero y que no pida numeros negativos
          if (cantidadRetirar >0 && cantidadRetirar <=saldo){
          saldo = saldo - cantidadRetirar;//restamos al saldo global 
