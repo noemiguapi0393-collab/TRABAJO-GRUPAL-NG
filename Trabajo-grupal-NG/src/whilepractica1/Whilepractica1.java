@@ -33,7 +33,7 @@ public class Whilepractica1 {
              int intentos2 = 3;
              if (clave_ingresada == clave){
                 do {
-                 System.out.println("bienvenido al cajero");
+                 System.out.println("\nbienvenido al cajero");
                  System.out.println("seleccione una opcion: ");
                  System.out.println("1.consultar saldo");
                  System.out.println("2.retirar dinero");
@@ -63,7 +63,13 @@ public class Whilepractica1 {
                          intentos2 --;
                  }
                  
-                // CAMBIO 3: Simplificada la condición del do-while para evitar bucles raros en el menú interno
+                 // CAMBIO 4: Si no elige salir, hace una pausa antes de volver a mostrar el menú
+                 if (opcion != 4) {
+                     System.out.println("\nPresione ENTER para continuar...");
+                     sc.nextLine(); // Limpia buffer
+                     sc.nextLine(); // Espera el Enter del estudiante
+                 }
+                 
                 } while (opcion != 4); 
                     break;
                      
