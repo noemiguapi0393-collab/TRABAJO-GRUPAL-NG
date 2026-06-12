@@ -42,7 +42,7 @@ public class Whilepractica1 {
                 do {
                  System.out.println("\nBIENBENIDO AL CAJERO ");//mejora de mensaje
                  System.out.println("\n========== MENU ==========");
-                 System.out.println("1.consultar saldo");
+                 System.out.println("1.consultar tu saldo");
                  System.out.println("2.retirar el dinero");
                  System.out.println("3.depositar dinero");
                  System.out.println("4.salir del sistema");
