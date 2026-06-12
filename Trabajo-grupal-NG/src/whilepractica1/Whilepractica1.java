@@ -115,13 +115,23 @@ public class Whilepractica1 {
          
          // Validamos que tenga dinero y que no pida numeros negativos
          if (cantidadRetirar >0 && cantidadRetirar <=saldo){
-             saldo = saldo - cantidadRetirar; // Restamos al saldo global 
-             System.out.println("Retiro realizado correctamente.");
-             System.out.printf("Saldo restante: $%.2f%n", saldo);
+              System.out.println("Confirma el retiro de $" + cantidadRetirar + "?");
+              System.out.println("1. Si");
+              System.out.println("2. No");
+
+            int confirmar = sc.nextInt();
+            if(confirmar == 1){saldo -= cantidadRetirar;
+
+            System.out.println(" Retiro realizado correctamente.");
+            System.out.printf("Saldo restante: %.2f%n", saldo);
+            }else {
+
+            System.out.println("Operacion cancelada.");
+        }
          }else if (cantidadRetirar > saldo ){
-             System.out.println("error: saldo insuficiente. tu saldo actual es de : "+saldo );
+             System.out.println("error: saldo insuficiente. tu saldo actual es de :$ "+saldo );
          }else{
-             System.out.println("cantidad no valida ");
+             System.out.println("la cantidad ingresada no es valida ");
          }
      }
 
