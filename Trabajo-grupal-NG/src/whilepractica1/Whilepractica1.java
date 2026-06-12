@@ -10,17 +10,23 @@ import java.util.Scanner;
  * @author Estudiante
  */
 public class Whilepractica1 {
+     // Ponemos el saldo aquí afuera para que todos los métodos los visualicen 
+     // y se actualicen de verdad 
      public static double saldo = 500;
      public static Scanner sc = new Scanner(System.in);
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
        cajero_automatico();
     }
     
      public static void cajero_automatico(){
+         // Algoritmo para simular cajero automatico
          int clave = 1234;
          int intentos = 3;
-         boolean sesionActiva = true; 
+         boolean sesionActiva = true; // Control de salida del cajero
          
          while (intentos > 0 && sesionActiva){
              System.out.println("cajero automatico");
@@ -30,7 +36,7 @@ public class Whilepractica1 {
              System.out.println("ingrese su clave");
              int clave_ingresada = sc.nextInt();
              int opcion;
-             int intentos2 = 3;
+             
              if (clave_ingresada == clave){
                 do {
                  System.out.println("\nbienvenido al cajero");
@@ -44,33 +50,32 @@ public class Whilepractica1 {
                  opcion = sc.nextInt();
                   
                  switch (opcion){
-                     case 1:
-                         System.out.println("consultar saldo");
+                     case 1: // Opcion consultar
                          consultar_saldo();   
                          break;
-                     case 2:
+                     case 2: // Opcion retirar
                          retirar_saldo();
                          break;
-                     case 3:
+                     case 3: // Opcion depositar (Cambio 1 realizado)
                          depositar_dinero();
                          break;
-                     case 4:
+                     case 4: // Opcion salir (Cambio 2 realizado)
                          System.out.println("gracias por preferirnos");
                          sesionActiva = false; 
                          break;
                      default:
+                         // CAMBIO 5: Se eliminó la variable muerta intentos2 para optimizar el código
                          System.out.println("opcion incorrecta");
-                         intentos2 --;
                  }
                  
-                 // CAMBIO 4: Si no elige salir, hace una pausa antes de volver a mostrar el menú
+                 // Bloque de pausa activa (Cambio 4 realizado)
                  if (opcion != 4) {
                      System.out.println("\nPresione ENTER para continuar...");
-                     sc.nextLine(); // Limpia buffer
-                     sc.nextLine(); // Espera el Enter del estudiante
+                     sc.nextLine(); 
+                     sc.nextLine(); 
                  }
                  
-                } while (opcion != 4); 
+                } while (opcion != 4); // Condición corregida (Cambio 3 realizado)
                     break;
                      
                  }else{
@@ -84,17 +89,21 @@ public class Whilepractica1 {
          }
      }
      
+     // Consultar saldo
      public static void consultar_saldo(){
          System.out.println("--------CONSULTAR SALDO --------");
          System.out.println("el saldo disponible es de "+ saldo);
      }
      
+     // Retirar saldo 
      public static void retirar_saldo (){
          System.out.println("---------RETIRAR SALDO-----------");
          System.out.println("Ingresa la cantidad a retirar: ");
          double cantidadRetirar = sc.nextDouble();
+         
+         // Validamos que tenga dinero y que no pida numeros negativos
          if (cantidadRetirar >0 && cantidadRetirar <=saldo){
-             saldo = saldo - cantidadRetirar;
+             saldo = saldo - cantidadRetirar; // Restamos al saldo global 
              System.out.println("Retiro exitoso");
              System.out.println("Saldo restante :" + saldo);
          }else if (cantidadRetirar > saldo ){
@@ -104,12 +113,14 @@ public class Whilepractica1 {
          }
      }
 
+     // Depositar saldo (Cambio 1 realizado)
      public static void depositar_dinero() {
          System.out.println("---------DEPOSITAR DINERO-----------");
          System.out.println("Ingresa la cantidad a depositar: ");
          double cantidadDepositar = sc.nextDouble();
+         
          if (cantidadDepositar > 0) {
-             saldo = saldo + cantidadDepositar;
+             saldo = saldo + cantidadDepositar; // Sumamos al saldo global
              System.out.println("Depósito exitoso.");
              System.out.println("Tu nuevo saldo es de: " + saldo);
          } else {
