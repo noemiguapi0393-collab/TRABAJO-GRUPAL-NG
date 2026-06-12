@@ -96,9 +96,9 @@ public class Whilepractica1 {
              System.out.println("tarjeta bloqueada, haz superado los 3 intentos");
          }
      }
-     
+     //consultar saldo
      public static void consultar_saldo(){
-         
+         System.out.println("--------CONSULTAR SALDO --------");
          System.out.println("el saldo disponible es de "+ saldo);
      }
 }
